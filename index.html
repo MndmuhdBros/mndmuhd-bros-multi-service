@@ -8,145 +8,134 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-*{margin:0;padding:0;box-sizing:border-box;}
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
 font-family:'Poppins',sans-serif;
 background:#0d1117;
 color:#fff;
-overflow-x:hidden;
+line-height:1.6;
 }
 
-a{text-decoration:none;color:inherit;}
+a{text-decoration:none;color:inherit}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* HEADER */
 
 header{
 background:#090b10;
-padding:25px 0;
-text-align:center;
-color:#66fcf1;
+padding:18px 0;
 position:sticky;
 top:0;
 z-index:1000;
 box-shadow:0 3px 15px rgba(0,255,255,0.2);
 }
 
-header h1{
-font-size:2rem;
-font-weight:700;
-color:#45a29e;
-}
-
-header nav ul{
-list-style:none;
-margin-top:15px;
-}
-
-header nav ul li{
-display:inline-block;
-margin:0 15px;
-}
-
-header nav ul li a{
+.logo{
+font-size:1.6rem;
 color:#66fcf1;
-font-weight:600;
-padding:5px 10px;
-border-radius:6px;
+font-weight:700;
 }
 
-header nav ul li a:hover{
-background:linear-gradient(90deg,#66fcf1,#45a29e);
-color:#0d1117;
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.nav-links{
+list-style:none;
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+font-weight:600;
+color:#66fcf1;
+}
+
+.menu-btn{
+display:none;
+font-size:1.8rem;
+cursor:pointer;
 }
 
 /* HERO */
 
 .hero{
-background:linear-gradient(180deg,rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
-url('https://images.pexels.com/photos/3861951/pexels-photo-3861951.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
+url('https://images.pexels.com/photos/3861951/pexels-photo-3861951.jpeg?auto=compress&cs=tinysrgb&w=1600')
+center/cover no-repeat;
+
 min-height:90vh;
 display:flex;
-justify-content:center;
 align-items:center;
 text-align:center;
-padding:40px 20px;
+padding:40px 0;
 }
 
 .hero h2{
 font-size:3rem;
 color:#66fcf1;
-text-shadow:0 0 10px #66fcf1,0 0 20px #45a29e;
-overflow:hidden;
-white-space:nowrap;
-border-right:3px solid #66fcf1;
-width:0;
-animation:typing 3s steps(30) forwards, hideCursor 0s 3s forwards;
-}
-
-@keyframes typing{
-from{width:0}
-to{width:100%}
-}
-
-@keyframes hideCursor{
-to{border-right:none;}
+margin-bottom:15px;
 }
 
 .hero p{
-font-size:1.3rem;
-margin-top:15px;
 color:#c5c6c7;
+font-size:1.2rem;
 }
 
 .hero button{
-margin-top:30px;
+margin-top:25px;
+padding:14px 30px;
+border:none;
+border-radius:10px;
+font-weight:bold;
 background:linear-gradient(135deg,#66fcf1,#45a29e);
 color:#0d1117;
-padding:14px 32px;
-border:none;
-border-radius:12px;
-font-weight:bold;
 cursor:pointer;
 }
 
 /* SERVICES */
 
 .services{
-padding:80px 15px;
+padding:70px 0;
 text-align:center;
 }
 
 .services h2{
-font-size:2.8rem;
-margin-bottom:40px;
+font-size:2.4rem;
 color:#45a29e;
+margin-bottom:40px;
 }
 
-.service-container{
+.service-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
 }
 
 .service-card{
 background:#0b0d14;
-border-radius:20px;
+border-radius:18px;
 overflow:hidden;
-box-shadow:0 10px 20px rgba(102,252,241,0.25);
 transition:.4s;
+box-shadow:0 8px 20px rgba(0,255,255,0.2);
 }
 
 .service-card img{
 width:100%;
-height:200px;
+height:180px;
 object-fit:cover;
 }
 
-.service-card:hover{
-transform:scale(1.05);
-}
-
 .service-card h3{
-padding:20px 15px 10px;
+padding:15px;
 color:#66fcf1;
 }
 
@@ -155,122 +144,94 @@ padding:0 15px 20px;
 color:#c5c6c7;
 }
 
+.service-card:hover{
+transform:translateY(-8px);
+}
+
 /* ABOUT */
 
 .about{
 background:#090b10;
-padding:60px 15px;
+padding:70px 0;
 text-align:center;
 }
 
 .about h2{
-font-size:2.5rem;
 color:#66fcf1;
-margin-bottom:20px;
+margin-bottom:15px;
 }
 
 /* CONTACT */
 
 .contact{
-padding:80px 15px;
+padding:70px 0;
 text-align:center;
 }
 
-.contact input,.contact textarea{
-width:90%;
-max-width:500px;
-padding:14px;
-margin:12px 0;
-border:2px solid #45a29e50;
-border-radius:8px;
-background:#0b0d14;
-color:#c5c6c7;
-}
-
-.contact button{
-padding:14px 32px;
-background:linear-gradient(135deg,#66fcf1,#45a29e);
-border:none;
-border-radius:8px;
-cursor:pointer;
+.contact a{
+color:#66fcf1;
 }
 
 /* FOOTER */
 
 footer{
 background:#090b10;
-color:#66fcf1;
-padding:20px 0;
+padding:18px;
 text-align:center;
+color:#66fcf1;
 }
 
 /* WHATSAPP */
 
 .whatsapp{
 position:fixed;
-bottom:25px;
-right:25px;
+bottom:20px;
+right:20px;
 background:#25d366;
-width:65px;
-height:65px;
+width:60px;
+height:60px;
 border-radius:50%;
 display:flex;
-justify-content:center;
 align-items:center;
-font-size:30px;
+justify-content:center;
+font-size:28px;
+color:white;
 }
 
-/* 📱 MOBILE RESPONSIVE */
+/* MOBILE */
 
-@media (max-width:768px){
-
-header h1{
-font-size:1.5rem;
-}
-
-header nav ul li{
-display:block;
-margin:10px 0;
-}
+@media(max-width:768px){
 
 .hero h2{
-font-size:1.8rem;
-white-space:normal;
-border-right:none;
-width:100%;
-animation:none;
+font-size:2rem;
 }
 
 .hero p{
 font-size:1rem;
 }
 
-.hero button{
-padding:12px 24px;
-font-size:.9rem;
-}
-
-.services h2{
-font-size:2rem;
-}
-
-.service-container{
-grid-template-columns:1fr;
-}
-
-.about h2{
-font-size:1.8rem;
-}
-
-.contact input,
-.contact textarea{
+.nav-links{
+position:absolute;
+top:70px;
+left:0;
 width:100%;
+background:#090b10;
+flex-direction:column;
+align-items:center;
+display:none;
 }
 
-.whatsapp{
-width:55px;
-height:55px;
-font-size:24px;
+.nav-links.active{
+display:flex;
+}
+
+.nav-links li{
+margin:15px 0;
+}
+
+.menu-btn{
+display:block;
+color:#66fcf1;
 }
 
 }
@@ -281,68 +242,78 @@ font-size:24px;
 <body>
 
 <header>
-<h1>Mndmuhd&Bros Multi-Service</h1>
-
+<div class="container">
 <nav>
-<ul>
-<li><a href="#services">SERVICES</a></li>
-<li><a href="#about">ABOUT</a></li>
-<li><a href="#contact">CONTACT</a></li>
+
+<div class="logo">Mndmuhd&Bros</div>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<ul class="nav-links" id="menu">
+<li><a href="#services">Services</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
+
 </nav>
+</div>
 </header>
 
 <section class="hero">
-<div>
+<div class="container">
 <h2>Welcome to Mndmuhd&Bros</h2>
-<p>Your ultimate tech & service solution — we deliver quality!</p>
+<p>Your ultimate tech & service solution</p>
 <button onclick="scrollToSection('services')">Explore Services</button>
 </div>
 </section>
 
 <section id="services" class="services">
+<div class="container">
+
 <h2>Our Services</h2>
 
-<div class="service-container">
+<div class="service-grid">
 
 <div class="service-card">
-<img src="https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600">
+<img src="https://images.pexels.com/photos/18105/pexels-photo.jpg">
 <h3>Laptops & Computers</h3>
-<p>High quality laptops & computer accessories.</p>
+<p>High quality laptops and computer accessories.</p>
 </div>
 
 <div class="service-card">
-<img src="https://images.pexels.com/photos/6078127/pexels-photo-6078127.jpeg?auto=compress&cs=tinysrgb&w=600">
+<img src="https://images.pexels.com/photos/6078127/pexels-photo-6078127.jpeg">
 <h3>Mobile Phones</h3>
-<p>iPhone, Android & Samsung phones available.</p>
+<p>iPhone, Samsung and Android devices available.</p>
 </div>
 
 <div class="service-card">
-<img src="https://images.pexels.com/photos/3861952/pexels-photo-3861952.jpeg?auto=compress&cs=tinysrgb&w=600">
-<h3>Software & Web Dev</h3>
-<p>Custom software, websites & mobile apps built for you.</p>
+<img src="https://images.pexels.com/photos/3861952/pexels-photo-3861952.jpeg">
+<h3>Web Development</h3>
+<p>We build websites, apps and custom software.</p>
+</div>
+
 </div>
 
 </div>
 </section>
 
 <section id="about" class="about">
-<h2>Who We Are</h2>
-<p>Mndmuhd&Bros Multi-Service is your all-in-one solution for tech products and services.</p>
+<div class="container">
+<h2>About Us</h2>
+<p>Mndmuhd&Bros Multi-Service provides reliable technology services and digital solutions.</p>
+</div>
 </section>
 
 <section id="contact" class="contact">
+<div class="container">
+
 <h2>Contact Us</h2>
 
-<p>
-📞 <a href="tel:+2348033393035">+2348033393035</a> |
-📞 <a href="tel:+2347010824485">+2347010824485</a>
-</p>
+<p>📞 <a href="tel:+2348033393035">+2348033393035</a></p>
+<p>📞 <a href="tel:+2347010824485">+2347010824485</a></p>
+<p>📧 <a href="mailto:muhdnura848@gmail.com">muhdnura848@gmail.com</a></p>
 
-<p>
-📧 <a href="mailto:muhdnura848@gmail.com">muhdnura848@gmail.com</a>
-</p>
-
+</div>
 </section>
 
 <footer>
@@ -352,9 +323,15 @@ font-size:24px;
 <a href="https://wa.me/2348033393035" class="whatsapp">💬</a>
 
 <script>
+
 function scrollToSection(id){
 document.getElementById(id).scrollIntoView({behavior:'smooth'});
 }
+
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+
 </script>
 
 </body>

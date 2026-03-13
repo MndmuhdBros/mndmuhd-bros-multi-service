@@ -18,7 +18,6 @@ overflow-x:hidden;
 }
 
 a{text-decoration:none;color:inherit;}
-.container{width:90%;max-width:1200px;margin:auto;}
 
 header{
 background:#090b10;
@@ -37,8 +36,15 @@ font-weight:700;
 color:#45a29e;
 }
 
-header nav ul{list-style:none;margin-top:15px;}
-header nav ul li{display:inline-block;margin:0 15px;}
+header nav ul{
+list-style:none;
+margin-top:15px;
+}
+
+header nav ul li{
+display:inline-block;
+margin:0 15px;
+}
 
 header nav ul li a{
 color:#66fcf1;
@@ -57,25 +63,22 @@ color:#0d1117;
 .hero{
 background:linear-gradient(180deg,rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
 url('https://images.pexels.com/photos/3861951/pexels-photo-3861951.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
-
-height:90vh;
+min-height:90vh;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:0 20px;
+padding:40px 20px;
 }
 
 .hero h2{
 font-size:3rem;
 color:#66fcf1;
 text-shadow:0 0 10px #66fcf1,0 0 20px #45a29e;
-
 overflow:hidden;
 white-space:nowrap;
 border-right:3px solid #66fcf1;
 width:0;
-
 animation:typing 3s steps(30) forwards, hideCursor 0s 3s forwards;
 }
 
@@ -104,6 +107,8 @@ border-radius:12px;
 font-weight:bold;
 cursor:pointer;
 }
+
+/* SERVICES */
 
 .services{
 padding:80px 15px;
@@ -150,6 +155,8 @@ padding:0 15px 20px;
 color:#c5c6c7;
 }
 
+/* ABOUT */
+
 .about{
 background:#090b10;
 padding:60px 15px;
@@ -161,6 +168,8 @@ font-size:2.5rem;
 color:#66fcf1;
 margin-bottom:20px;
 }
+
+/* CONTACT */
 
 .contact{
 padding:80px 15px;
@@ -186,12 +195,16 @@ border-radius:8px;
 cursor:pointer;
 }
 
+/* FOOTER */
+
 footer{
 background:#090b10;
 color:#66fcf1;
 padding:20px 0;
 text-align:center;
 }
+
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -206,6 +219,62 @@ justify-content:center;
 align-items:center;
 font-size:30px;
 }
+
+/* 📱 MOBILE RESPONSIVE */
+
+@media (max-width:768px){
+
+header h1{
+font-size:1.5rem;
+}
+
+header nav ul li{
+display:block;
+margin:10px 0;
+}
+
+.hero h2{
+font-size:1.8rem;
+white-space:normal;
+border-right:none;
+width:100%;
+animation:none;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+.hero button{
+padding:12px 24px;
+font-size:.9rem;
+}
+
+.services h2{
+font-size:2rem;
+}
+
+.service-container{
+grid-template-columns:1fr;
+}
+
+.about h2{
+font-size:1.8rem;
+}
+
+.contact input,
+.contact textarea{
+width:100%;
+}
+
+.whatsapp{
+width:55px;
+height:55px;
+font-size:24px;
+}
+
+}
+
 </style>
 </head>
 

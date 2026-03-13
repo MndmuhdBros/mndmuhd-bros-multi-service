@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mndmuhd&Bros Multi-Service</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0d1117;
+color:#fff;
+overflow-x:hidden;
+}
+
+a{text-decoration:none;color:inherit;}
+.container{width:90%;max-width:1200px;margin:auto;}
+
+header{
+background:#090b10;
+padding:25px 0;
+text-align:center;
+color:#66fcf1;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 3px 15px rgba(0,255,255,0.2);
+}
+
+header h1{
+font-size:2rem;
+font-weight:700;
+color:#45a29e;
+}
+
+header nav ul{list-style:none;margin-top:15px;}
+header nav ul li{display:inline-block;margin:0 15px;}
+
+header nav ul li a{
+color:#66fcf1;
+font-weight:600;
+padding:5px 10px;
+border-radius:6px;
+}
+
+header nav ul li a:hover{
+background:linear-gradient(90deg,#66fcf1,#45a29e);
+color:#0d1117;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(180deg,rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+url('https://images.pexels.com/photos/3861951/pexels-photo-3861951.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
+
+height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 20px;
+}
+
+.hero h2{
+font-size:3rem;
+color:#66fcf1;
+text-shadow:0 0 10px #66fcf1,0 0 20px #45a29e;
+
+overflow:hidden;
+white-space:nowrap;
+border-right:3px solid #66fcf1;
+width:0;
+
+animation:typing 3s steps(30) forwards, hideCursor 0s 3s forwards;
+}
+
+@keyframes typing{
+from{width:0}
+to{width:100%}
+}
+
+@keyframes hideCursor{
+to{border-right:none;}
+}
+
+.hero p{
+font-size:1.3rem;
+margin-top:15px;
+color:#c5c6c7;
+}
+
+.hero button{
+margin-top:30px;
+background:linear-gradient(135deg,#66fcf1,#45a29e);
+color:#0d1117;
+padding:14px 32px;
+border:none;
+border-radius:12px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.services{
+padding:80px 15px;
+text-align:center;
+}
+
+.services h2{
+font-size:2.8rem;
+margin-bottom:40px;
+color:#45a29e;
+}
+
+.service-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.service-card{
+background:#0b0d14;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 20px rgba(102,252,241,0.25);
+transition:.4s;
+}
+
+.service-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.service-card:hover{
+transform:scale(1.05);
+}
+
+.service-card h3{
+padding:20px 15px 10px;
+color:#66fcf1;
+}
+
+.service-card p{
+padding:0 15px 20px;
+color:#c5c6c7;
+}
+
+.about{
+background:#090b10;
+padding:60px 15px;
+text-align:center;
+}
+
+.about h2{
+font-size:2.5rem;
+color:#66fcf1;
+margin-bottom:20px;
+}
+
+.contact{
+padding:80px 15px;
+text-align:center;
+}
+
+.contact input,.contact textarea{
+width:90%;
+max-width:500px;
+padding:14px;
+margin:12px 0;
+border:2px solid #45a29e50;
+border-radius:8px;
+background:#0b0d14;
+color:#c5c6c7;
+}
+
+.contact button{
+padding:14px 32px;
+background:linear-gradient(135deg,#66fcf1,#45a29e);
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+footer{
+background:#090b10;
+color:#66fcf1;
+padding:20px 0;
+text-align:center;
+}
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25d366;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Mndmuhd&Bros Multi-Service</h1>
+
+<nav>
+<ul>
+<li><a href="#services">SERVICES</a></li>
+<li><a href="#about">ABOUT</a></li>
+<li><a href="#contact">CONTACT</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<h2>Welcome to Mndmuhd&Bros</h2>
+<p>Your ultimate tech & service solution — we deliver quality!</p>
+<button onclick="scrollToSection('services')">Explore Services</button>
+</div>
+</section>
+
+<section id="services" class="services">
+<h2>Our Services</h2>
+
+<div class="service-container">
+
+<div class="service-card">
+<img src="https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600">
+<h3>Laptops & Computers</h3>
+<p>High quality laptops & computer accessories.</p>
+</div>
+
+<div class="service-card">
+<img src="https://images.pexels.com/photos/6078127/pexels-photo-6078127.jpeg?auto=compress&cs=tinysrgb&w=600">
+<h3>Mobile Phones</h3>
+<p>iPhone, Android & Samsung phones available.</p>
+</div>
+
+<div class="service-card">
+<img src="https://images.pexels.com/photos/3861952/pexels-photo-3861952.jpeg?auto=compress&cs=tinysrgb&w=600">
+<h3>Software & Web Dev</h3>
+<p>Custom software, websites & mobile apps built for you.</p>
+</div>
+
+</div>
+</section>
+
+<section id="about" class="about">
+<h2>Who We Are</h2>
+<p>Mndmuhd&Bros Multi-Service is your all-in-one solution for tech products and services.</p>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact Us</h2>
+
+<p>
+📞 <a href="tel:+2348033393035">+2348033393035</a> |
+📞 <a href="tel:+2347010824485">+2347010824485</a>
+</p>
+
+<p>
+📧 <a href="mailto:muhdnura848@gmail.com">muhdnura848@gmail.com</a>
+</p>
+
+</section>
+
+<footer>
+© 2026 Mndmuhd&Bros Multi-Service
+</footer>
+
+<a href="https://wa.me/2348033393035" class="whatsapp">💬</a>
+
+<script>
+function scrollToSection(id){
+document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
